@@ -1,3 +1,8 @@
+// Name :　CC Attack ++ Rewrite
+// Author : MasonDye
+// Version : Pre-1.0.0
+// GitHub : https://github.com/MasonDye/CC-Attack-Rewrite
+
 package main
 
 import (
