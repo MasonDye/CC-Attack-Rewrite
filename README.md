@@ -49,3 +49,6 @@ Usage:
   -url string
         Attack URL
 </code></pre>
+
+## How to Build?
+<pre><code>go build CC-Attack-Rewrite.go</code></pre>
