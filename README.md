@@ -4,7 +4,7 @@
 ![CC Attack Rewrite preview](https://github.com/MasonDye/CC-Attack-Rewrite/blob/95728b220dc90c762ce9034904ec9489037854b7/img/preview.png)
 :-:
 Next Generation CC Attack Tool ✨
-✨ Threads ✨ HTTP Proxy ✨ Synchronous ✨ multi-threaded✨
+✨ Threads ✨ HTTP Proxy ✨ Asynchronous ✨ multi-threaded✨
 
 ## What is CC Attack ++ Rewrite?
 CC Attack ++ Rewrite is a CC attack program that has been rewritten in GoLang based on its predecessor project, CC Attack ++.
