@@ -37,19 +37,16 @@ Full command:
 
 ### Format: 
 ip pool (eg. ip.txt)
-<pre><code>
+<pre><code>http://address:port
 http://address:port
 http://address:port
-http://address:port
-......
-</code></pre>
+......</code></pre>
 
 ua (eg. ua.txt)
 <pre><code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3</code></pre>
 
 ### Usage:
-<pre><code>
-Usage:
+<pre><code>Usage:
   -ip string
         IP Pool Path (txt)
   -thread int
@@ -59,8 +56,7 @@ Usage:
   -ua string
         User-Agent Config Path (txt)
   -url string
-        Attack URL
-</code></pre>
+        Attack URL</code></pre>
 
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
