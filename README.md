@@ -52,3 +52,6 @@ Usage:
 
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/MasonDye/CC-Attack-Rewrite.svg)](https://starchart.cc/MasonDye/CC-Attack-Rewrite)
