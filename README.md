@@ -1,10 +1,10 @@
 ![CC Attack Rewrite](https://github.com/MasonDye/CC-Attack-Rewrite/blob/95728b220dc90c762ce9034904ec9489037854b7/img/CCAttack%2B%2BGo128.png)
 # CC Attack ++ Rewrite
-![](https://img.shields.io/badge/build-success-green) ![](https://img.shields.io/badge/version-1.0.0-orange) ![](https://img.shields.io/badge/author-MasonDye-blue)
+![](https://img.shields.io/badge/build-success-green) ![](https://img.shields.io/badge/version-2.0.0-orange) ![](https://img.shields.io/badge/author-MasonDye-blue)
 ![CC Attack Rewrite preview](https://github.com/MasonDye/CC-Attack-Rewrite/blob/95728b220dc90c762ce9034904ec9489037854b7/img/preview.png)
 :-:
 Next Generation CC Attack Tool ✨
-✨ Threads ✨ HTTP Proxy ✨
+✨ Threads ✨ HTTP Proxy ✨ Synchronous ✨ multi-threaded✨
 
 ## What is CC Attack ++ Rewrite?
 CC Attack ++ Rewrite is a CC attack program that has been rewritten in GoLang based on its predecessor project, CC Attack ++.
@@ -34,6 +34,13 @@ Full command:
 
 [UA] Set User-Agent Config Path (txt)
 <pre><code>-ua string</code></pre>
+
+### Format: 
+ip pool (eg. ip.txt)
+<code>http://address:port</code>
+
+ua (eg. ua.txt)
+<code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3</code>
 
 ### Usage:
 <pre><code>
