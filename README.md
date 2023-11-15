@@ -13,6 +13,8 @@ CC Attack ++ Rewrite is a CC attack program that has been rewritten in GoLang ba
 ## What can it do?
 Test website firewall, DDoS CC protection; test network performance, maximum network request load.
 
+</div>
+
 ## How to use CC Attack ++ Rewrite?
 Full command:
 <pre><code>./cca -url=http://localhost -time=100 -ua=ua.txt -ip=ip-pool.txt -thread=8</code></pre>
@@ -48,4 +50,3 @@ Usage:
   -url string
         Attack URL
 </code></pre>
-</div>
