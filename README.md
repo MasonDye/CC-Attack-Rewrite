@@ -32,7 +32,7 @@ Full command:
 [Speed] Attack Speed(ms) (default 100)
 <pre><code>-speed int</code></pre>
 
-[UA] Set User-Agent Config Path (relative path) (.txt)
+[UA] Set User-Agent pool Path (relative path) (.txt)
 <pre><code>-ua string</code></pre>
 
 [Timeout] Timeout(ms) (default 1000)
