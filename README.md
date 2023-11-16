@@ -32,7 +32,7 @@ Full command:
 [Speed] Attack Speed(ms) (default 100)
 <pre><code>-speed int</code></pre>
 
-[UA] Set User-Agent Config Path (txt)
+[UA] Set User-Agent Config Path (relative path) (.txt)
 <pre><code>-ua string</code></pre>
 
 [Timeout] Timeout(ms) (default 1000)
@@ -45,7 +45,7 @@ http://address:port
 http://address:port
 ......</code></pre>
 
-ua (eg. ua-list.txt)
+ua pool (eg. ua-list.txt)
 <pre><code>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
 Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
