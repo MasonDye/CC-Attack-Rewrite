@@ -16,7 +16,7 @@ Test website firewall, DDoS CC protection; test network performance, maximum net
 
 ## How to use CC Attack ++ Rewrite?
 Full command:
-<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua=ua.txt -ip=ip-pool.txt</code></pre>
+<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua=ua-list.txt -ip=ip-list.txt</code></pre>
 
 ### Parameter description:
 
