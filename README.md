@@ -1,6 +1,6 @@
 ![CC Attack Rewrite](https://github.com/MasonDye/CC-Attack-Rewrite/blob/95728b220dc90c762ce9034904ec9489037854b7/img/CCAttack%2B%2BGo128.png)
 # CC Attack ++ Rewrite
-![](https://img.shields.io/badge/Build-success-green) ![](https://img.shields.io/badge/Version-2.2.1-orange) ![](https://img.shields.io/badge/Author-MasonDye-blue)
+![](https://img.shields.io/badge/Build-success-green) ![](https://img.shields.io/badge/Version-2.2.2-orange) ![](https://img.shields.io/badge/Author-MasonDye-blue)
 ![CC Attack Rewrite preview](https://github.com/MasonDye/CC-Attack-Rewrite/blob/main/img/Preview.png)
 :-:
 Next Generation CC Attack Tool ✨
