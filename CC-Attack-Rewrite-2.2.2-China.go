@@ -24,8 +24,8 @@ func main() {
 	targetURL := flag.String("url", "", "目标攻击网址")
 	requestInterval := flag.Int("speed", 100, "攻击速度(ms)")
 	timeout := flag.Int("timeout", 2500, "请求超时 (ms)")
-	userAgentFile := flag.String("ua", "", "User-Agent(用户代理) 池相对地址 (txt)")
-	proxyListFile := flag.String("ip", "", "IP 代理池(http) (txt)")
+	userAgentFile := flag.String("ua", "", "User-Agent(用户代理) 池 相对地址 (txt)")
+	proxyListFile := flag.String("ip", "", "IP 代理池(http) 相对地址 (txt)")
 	threadCount := flag.Int("thread", 2, "线程数")
 
 	flag.Parse()
