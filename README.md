@@ -38,9 +38,9 @@ Full command:
 
 ### Format: 
 ip pool (eg. ip-list.txt)
-<pre><code>http://address:port
-http://address:port
-http://address:port
+<pre><code>address:port
+address:port
+address:port
 ......</code></pre>
 
 ua pool (eg. ua-list.txt)
