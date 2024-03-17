@@ -18,7 +18,7 @@ import (
 	"math/rand"
 )
 
-var version = "2.2.2 (Mainland China) (BUILD 2023/11/29 12:00)"
+var version = "2.2.3 (Mainland China) (BUILD 2024/3/7 8:45)"
 
 func main() {
 	targetURL := flag.String("url", "", "目标攻击网址")
