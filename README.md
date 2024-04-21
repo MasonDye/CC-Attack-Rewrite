@@ -14,7 +14,7 @@ Test website firewall, DDoS CC protection; test network performance, maximum net
 
 ## How to use CC Attack ++ Rewrite?
 Full command:
-<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua=ua-list.txt -ip=ip-list.txt</code></pre>
+<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua=ua-list.txt -ip=ip-list.txt -time=300 -http=1.1 -cookie='test=cookievule;'</code></pre>
 
 ### Parameter description:
 
@@ -36,6 +36,15 @@ Full command:
 [Timeout] Timeout(ms) (default 1000)
 <pre><code>-timeout int</code></pre>
 
+[Cookie] Cookie to include in request (default NULL)
+<pre><code>-cookie string</code></pre>
+
+[Time] Attack Time (seconds) (default NULL)
+<pre><code>-time int</code></pre>
+
+[Http] HTTP version (1.1 or 2.0) (default 1.1)
+<pre><code>-http string</code></pre>
+
 ### Format: 
 ip pool (eg. ip-list.txt)
 <pre><code>address:port
@@ -51,18 +60,24 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
 
 ### Usage:
 <pre><code>Usage:
-  -ip string
+  -cookie
+        Cookie to include in request
+  -http
+        HTTP version (1.1 or 2.0)
+  -ip
         IP Pool Path (txt)
-  -thread int
-        thread (default 2)
-  -time int
-        Attack Speed(ms) (default 100)
-  -ua string
+  -speed
+        Attack Speed(ms)
+  -thread
+        thread
+  -time
+        Attack Time (seconds)
+  -timeout
+        Request Timeout (ms)
+  -ua
         User-Agent Pool Path (txt)
-  -url string
-        Attack URL
-  -timeout int
-        Timeout(ms) (default 2500)</code></pre>
+  -url
+        Attack URL</code></pre>
 
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
