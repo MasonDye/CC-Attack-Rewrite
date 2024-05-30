@@ -82,7 +82,7 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
   -ua_pool
         User-Agent Pool Path (txt)
   -url
-        Attack URL
+        Attack URL</pre></code>
 
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
