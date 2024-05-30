@@ -14,7 +14,7 @@ Test website firewall, DDoS CC protection; test network performance, maximum net
 
 ## How to use CC Attack ++ Rewrite?
 Full command:
-<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua=ua-list.txt -ip=ip-list.txt -time=300 -http=1.1 -cookie='test=cookievule;'</code></pre>
+<pre><code>./CC-Attack-Rewrite -url=http://localhost -speed=100 -thread=8 -timeout=2500 -ua_pool=ua-list.txt -ip_pool=ip-list.txt -time=300 -http_version=1.1 -http_methods 'GET' -cookie='test=cookievalue;'</code></pre>
 
 ### Parameter description:
 
@@ -22,7 +22,7 @@ Full command:
 <pre><code>-url string</code></pre>
 
 [IP Pool] IP pool path (relative path) (.txt).
-<pre><code>-ip string</code></pre>
+<pre><code>-ip_pool string</code></pre>
 
 [Thread] Number of threads (default 2)
 <pre><code>-thread int</code></pre>
@@ -30,8 +30,8 @@ Full command:
 [Speed] Attack Speed(ms) (default 100)
 <pre><code>-speed int</code></pre>
 
-[UA] Set User-Agent pool Path (relative path) (.txt)
-<pre><code>-ua string</code></pre>
+[UA Pool] Set User-Agent pool Path (relative path) (.txt)
+<pre><code>-ua_pool string</code></pre>
 
 [Timeout] Timeout(ms) (default 1000)
 <pre><code>-timeout int</code></pre>
@@ -42,8 +42,11 @@ Full command:
 [Time] Attack Time (seconds) (default NULL)
 <pre><code>-time int</code></pre>
 
-[Http] HTTP version (1.1 or 2.0) (default 1.1)
-<pre><code>-http string</code></pre>
+[Http-Version] HTTP version (1.1 or 2.0) (default 1.1)
+<pre><code>-http_version string</code></pre>
+
+[Http-Method] HTTP Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT) (default GET)
+<pre><code>-http_methods string</code></pre>
 
 ### Format: 
 ip pool (eg. ip-list.txt)
@@ -62,9 +65,11 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
 <pre><code>Usage:
   -cookie
         Cookie to include in request
-  -http
+  -http_methods
+        HTTP Request Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT)
+  -http_version
         HTTP version (1.1 or 2.0)
-  -ip
+  -ip_pool
         IP Pool Path (txt)
   -speed
         Attack Speed(ms)
@@ -74,10 +79,10 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
         Attack Time (seconds)
   -timeout
         Request Timeout (ms)
-  -ua
+  -ua_pool
         User-Agent Pool Path (txt)
   -url
-        Attack URL</code></pre>
+        Attack URL
 
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
