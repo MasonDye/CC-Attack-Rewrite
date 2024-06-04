@@ -4,7 +4,7 @@
 ![CC Attack Rewrite preview](https://github.com/MasonDye/CC-Attack-Rewrite/blob/main/img/Preview.png)
 :-:
 Next Generation CC Attack Tool ✨
-✨ Threads ✨ HTTP Proxy ✨ Asynchronous ✨ Multi-threaded ✨
+✨ Multi-threaded ✨ HTTP Proxy ✨ Asynchronous ✨
 
 ## What is CC Attack ++ Rewrite?
 CC Attack ++ Rewrite is a CC attack program that has been rewritten in GoLang based on its predecessor project, CC Attack ++.
@@ -33,7 +33,7 @@ Full command:
 [UA Pool] Set User-Agent pool Path (relative path) (.txt)
 <pre><code>-ua_pool string</code></pre>
 
-[Timeout] Timeout(ms) (default 1000)
+[Timeout] Request Timeout(ms) (default 1000)
 <pre><code>-timeout int</code></pre>
 
 [Cookie] Cookie to include in request (default NULL)
@@ -45,7 +45,7 @@ Full command:
 [Http-Version] HTTP version (1.1 or 2.0) (default 1.1)
 <pre><code>-http_version string</code></pre>
 
-[Http-Method] HTTP Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT) (default GET)
+[Http-Method] HTTP Request Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT) (default GET)
 <pre><code>-http_methods string</code></pre>
 
 ### Format: 
@@ -70,17 +70,17 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
   -http_version
         HTTP version (1.1 or 2.0)
   -ip_pool
-        IP Pool Path (txt)
+        IP Pool Path (relative path) (txt)
   -speed
         Attack Speed(ms)
   -thread
-        thread
+        threads
   -time
         Attack Time (seconds)
   -timeout
         Request Timeout (ms)
   -ua_pool
-        User-Agent Pool Path (txt)
+        User-Agent Pool Path (relative path) (txt)
   -url
         Attack URL</pre></code>
 
