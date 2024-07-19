@@ -90,5 +90,8 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
 ## How to Build?
 <pre><code>go build CC-Attack-Rewrite.go</code></pre>
 
+## Why don't update?
+Due to my studies and personal reasons, the update frequency will be much slower. If you urgently need updates, you can submit a pull request or create an issue and wait for me to update it when I have time.
+
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/MasonDye/CC-Attack-Rewrite.svg)](https://starchart.cc/MasonDye/CC-Attack-Rewrite)
