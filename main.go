@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"cc-attack-rewrite/pkg/attack"
-	"cc-attack-rewrite/pkg/config"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/attack"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/config"
 )
 
 func main() {
@@ -23,5 +23,3 @@ func main() {
 
 	attacker.StartAttack()
 }
-
-

@@ -11,11 +11,11 @@ import (
 	"sync"
 	"time"
 
-	"cc-attack-rewrite/pkg/config"
-	"cc-attack-rewrite/pkg/httpclient"
-	"cc-attack-rewrite/pkg/proxy"
-	"cc-attack-rewrite/pkg/stats"
-	"cc-attack-rewrite/pkg/useragent"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/config"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/httpclient"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/proxy"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/stats"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/useragent"
 )
 
 // Attacker orchestrates the CC attack.
