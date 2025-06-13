@@ -85,10 +85,7 @@ Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome
         攻击地址</pre></code>
 
 ## 如何编译?
-<pre><code>go build CC-Attack-Rewrite.go</code></pre>
-
-## 为什么不更新？
-出于我的学业和个人原因，更新频率会慢很多，如果您急迫需要更新，可以提交pull request，或者创建一个issuse等待我有时间的时候更新。
+<pre><code>go build</code></pre>
 
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/MasonDye/CC-Attack-Rewrite.svg)](https://starchart.cc/MasonDye/CC-Attack-Rewrite)
