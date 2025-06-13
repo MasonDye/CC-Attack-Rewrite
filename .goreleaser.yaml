@@ -3,6 +3,7 @@ version: 2
 before:
   hooks:
     - go mod tidy
+    - $env:BUILD_DATE = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ")
 
 builds:
   - env:
@@ -10,6 +11,8 @@ builds:
 
     ldflags:
       - -s -w
+      - -X github.com/MasonDye/CC-Attack-Rewrite/version.Version={{ .Tag }}
+      - -X github.com/MasonDye/CC-Attack-Rewrite/version.BuildDate={{.Env.BUILD_DATE}}
     
     goos:
       - linux
@@ -43,9 +46,18 @@ archives:
       - goos: windows
         formats: [zip]
 
+checksum:
+  name_template: "checksums.txt"
+
 changelog:
   sort: asc
   filters:
     exclude:
       - "^docs:"
       - "^test:"
+
+release:
+  draft: true
+  prerelease: auto
+  target_commitish: "{{ .Commit }}"
+  name_template: "{{.Version}}"

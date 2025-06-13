@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 	"strings"
+
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/version"
 )
 
 type Config struct {
@@ -36,7 +38,7 @@ func ParseConfig() (*Config, error) {
 	flag.Parse()
 
 	if cfg.TargetURL == "" {
-		return nil, fmt.Errorf("\033[31mCC Attack ++ Rewrite \033[34mVersion: 2.4.0 (Releases 2024/05/29 9:15 AM)\033[0m\n\033[32mAuthor: MasonDye\033[0m\n\033[32mGitHub: https://github.com/MasonDye/CC-Attack-Rewrite\033[0m\n\n\033[31mUsage:\033[0m\n  -url string\n        Attack URL\n  -cookie string\n        Cookie to include in request\n  -http_methods string\n        HTTP Request Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT) (default \"GET\")\n  -http_version float\n        HTTP version (1.1 or 2.0) (default 1.1)\n  -ip_pool string\n        IP Pool Path (txt)\n  -speed int\n        Attack Speed(ms) (default 100)\n  -thread int\n        thread (default 2)\n  -time int\n        Attack Time (seconds) (default 0)\n  -timeout int\n        Request Timeout (ms) (default 2500)\n  -ua_pool string\n        User-Agent Pool Path (txt)")
+		return nil, fmt.Errorf("\033[31mCC Attack ++ Rewrite \033[34mVersion: %s (Releases %s)\033[0m\n\033[32mAuthor: MasonDye\033[0m\n\033[32mGitHub: https://github.com/MasonDye/CC-Attack-Rewrite\033[0m\n\n\033[31mUsage:\033[0m\n  -url string\n        Attack URL\n  -cookie string\n        Cookie to include in request\n  -http_methods string\n        HTTP Request Method (GET, POST, PUT, DELETE, HEAD, OPTIONS, PATCH, TRACE, CONNECT) (default \"GET\")\n  -http_version float\n        HTTP version (1.1 or 2.0) (default 1.1)\n  -ip_pool string\n        IP Pool Path (txt)\n  -speed int\n        Attack Speed(ms) (default 100)\n  -thread int\n        thread (default 2)\n  -time int\n        Attack Time (seconds) (default 0)\n  -timeout int\n        Request Timeout (ms) (default 2500)\n  -ua_pool string\n        User-Agent Pool Path (txt)", version.Version, version.BuildDate)
 	}
 
 	if cfg.HTTPVersion != 1.1 && cfg.HTTPVersion != 2.0 {
@@ -50,4 +52,3 @@ func ParseConfig() (*Config, error) {
 
 	return cfg, nil
 }
-

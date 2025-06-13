@@ -16,6 +16,7 @@ import (
 	"github.com/MasonDye/CC-Attack-Rewrite/pkg/proxy"
 	"github.com/MasonDye/CC-Attack-Rewrite/pkg/stats"
 	"github.com/MasonDye/CC-Attack-Rewrite/pkg/useragent"
+	"github.com/MasonDye/CC-Attack-Rewrite/pkg/version"
 )
 
 // Attacker orchestrates the CC attack.
@@ -62,7 +63,7 @@ func NewAttacker(cfg *config.Config) (*Attacker, error) {
 
 // StartAttack begins the CC attack.
 func (a *Attacker) StartAttack() {
-	fmt.Println("\033[32mCC Attack ++ \033[31m|\033[34m Version: 2.4.0 (Releases 2024/05/29 9:15 AM)\033[0m")
+	fmt.Printf("\033[32mCC Attack ++ \033[31m|\033[34m Version: %s (Releases %s)\033[0m\n", version.Version, version.BuildDate)
 	fmt.Println("\033[31mStart Attack!\033[0m")
 
 	ctx, cancel := context.WithCancel(context.Background())
