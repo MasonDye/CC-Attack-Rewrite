@@ -141,7 +141,7 @@ func (a *Attacker) worker(ctx context.Context) {
 
 			req, err := a.clientMgr.CreateRequest(strings.ToUpper(a.cfg.Method), reqURL, a.cfg.Cookie, userAgent, a.cfg.HTTPVersion)
 			if err != nil {
-				log.Printf("Worker %d: Request creation failed for %s: %v\n", os.Getpid(), reqURL, err)
+				// log.Printf("Worker %d: Request creation failed for %s: %v\n", os.Getpid(), reqURL, err)
 				a.stats.IncrementError()
 				time.Sleep(time.Duration(a.cfg.RequestInterval) * time.Millisecond)
 				continue
@@ -149,7 +149,7 @@ func (a *Attacker) worker(ctx context.Context) {
 
 			resp, err := client.Do(req)
 			if err != nil {
-				log.Printf("Worker %d: Request to %s failed: %v\n", os.Getpid(), reqURL, err)
+				// log.Printf("Worker %d: Request to %s failed: %v\n", os.Getpid(), reqURL, err)
 				a.stats.IncrementError()
 				time.Sleep(time.Duration(a.cfg.RequestInterval) * time.Millisecond)
 				continue
