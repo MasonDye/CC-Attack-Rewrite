@@ -1,0 +1,1 @@
+$env:BUILD_DATE = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ")

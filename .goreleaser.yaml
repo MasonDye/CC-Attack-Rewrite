@@ -3,7 +3,7 @@ version: 2
 before:
   hooks:
     - go mod tidy
-    - $env:BUILD_DATE = (Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ")
+    - .\build-time.ps1
 
 builds:
   - env:
