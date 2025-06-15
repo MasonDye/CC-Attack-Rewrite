@@ -1,23 +1,18 @@
 version: 2
-version_template: "{{ .Tag }}" 
 
 before:
   hooks:
     - go mod tidy
-    - powershell -ExecutionPolicy Bypass -File .\build-time.ps1
 
 builds:
   - env:
       - CGO_ENABLED=0
-    
-    env_files:
-    - build.env
 
     ldflags:
       - -s -w
-      - -X github.com/MasonDye/CC-Attack-Rewrite/version.Version={{ .Tag }}
-      - -X github.com/MasonDye/CC-Attack-Rewrite/version.BuildDate={{.Env.BUILD_DATE}}
-    
+      - -X 'github.com/MasonDye/CC-Attack-Rewrite/pkg/version.Version={{ .Tag }}'
+      - -X 'github.com/MasonDye/CC-Attack-Rewrite/pkg/version.BuildDate={{ .Date }}'
+
     goos:
       - linux
       - windows
@@ -40,6 +35,7 @@ archives:
     # this name template makes the OS and Arch compatible with the results of `uname`.
     name_template: >-
       {{ .ProjectName }}_
+      {{- .Tag }}_
       {{- title .Os }}_
       {{- if eq .Arch "amd64" }}x86_64
       {{- else if eq .Arch "386" }}i386
