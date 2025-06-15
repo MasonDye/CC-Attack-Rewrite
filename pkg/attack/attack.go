@@ -3,6 +3,7 @@ package attack
 import (
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"net/url"
@@ -141,10 +142,18 @@ func (a *Attacker) worker(ctx context.Context) {
 
 			req, err := a.clientMgr.CreateRequest(strings.ToUpper(a.cfg.Method), reqURL, a.cfg.Cookie, userAgent, a.cfg.HTTPVersion)
 			if err != nil {
-				// log.Printf("Worker %d: Request creation failed for %s: %v\n", os.Getpid(), reqURL, err)
 				a.stats.IncrementError()
 				time.Sleep(time.Duration(a.cfg.RequestInterval) * time.Millisecond)
 				continue
+			}
+
+			if a.cfg.Data != "" && (a.cfg.Method == "POST" || a.cfg.Method == "PUT" || a.cfg.Method == "PATCH") {
+				req.Body = io.NopCloser(strings.NewReader(a.cfg.Data))
+				req.ContentLength = int64(len(a.cfg.Data))
+				// 设置默认的 Content-Type header
+				if req.Header.Get("Content-Type") == "" {
+					req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+				}
 			}
 
 			resp, err := client.Do(req)
